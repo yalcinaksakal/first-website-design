@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- include meta for responsive web pages, to start wtih 100% scale -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./vendors/css/Grid.css" />
 
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css" />
+
+    <!-- include media queries css for responsive web pages -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/queries.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
@@ -38,7 +44,7 @@
       <div class="hero-text-box">
         <h1>
           goodbye junk food <br />
-          super healthy meals
+          hello super healthy meals
         </h1>
         <a class="btn btn-full" href="#">I’m hungry</a>
         <a class="btn btn-ghost" href="#">Show me more</a>
@@ -463,33 +469,29 @@
                 <option value="other">Other</option>
               </select>
             </div>
-            <div class="row">
-              <div class="col span-1-of-3">
-                <label>Newsletter?</label>
-              </div>
-              <div class="col span-2-of-3">
-                <input type="checkbox" name="news" id="news" checked />Yes,
-                please
-              </div>
+          </div>
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>Newsletter?</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="checkbox" name="news" id="news" checked />Yes, please
+            </div>
+          </div>
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label>Drop us a line</label>
+            </div>
+            <div class="col span-2-of-3">
+              <textarea name="message" placeholder="Your message"></textarea>
             </div>
             <div class="row">
               <div class="col span-1-of-3">
-                <label>Drop us a line</label>
+                <label>&nbsp;</label>
               </div>
               <div class="col span-2-of-3">
-                <textarea
-                  name="message"
-                  placeholder="Your message"
-
-                ></textarea>
+                <input type="submit" value="Send it!" />
               </div>
-              <div class="row">
-                <div class="col span-1-of-3">
-                  <label>&nbsp;</label>
-                </div>
-                <div class="col span-2-of-3">
-                <input type="submit" value="Send it!">
-                </div>
             </div>
           </div>
         </form>
@@ -499,36 +501,42 @@
     <footer>
       <div class="row">
         <div class="col span-1-of-2">
-            <ul class="footer-nav">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">IOS App</a></li>
-              <li><a href="#">Android App</a></li>
-            </ul>
+          <ul class="footer-nav">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">IOS App</a></li>
+            <li><a href="#">Android App</a></li>
+          </ul>
         </div>
         <div class="col span-1-of-2">
           <ul class="social-links">
-              <li><a href="#">
+            <li>
+              <a href="#">
                 <i class="icon ion-logo-facebook"></i>
-              </a></li>
-              <li><a href="#">
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <i class="icon ion-logo-twitter"></i>
-              </a></li>
-              <li><a href="#">
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <i class="icon ion-logo-googleplus"></i>
-              </a></li>
-              <li><a href="#">
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <i class="icon ion-logo-instagram"></i>
-              </a></li>
-
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div class="row">
-        <p>Copyright &copy; 2020 by JustFood. All rights reserved. </p>
+        <p>Copyright &copy; 2020 by JustFood. All rights reserved.</p>
       </div>
-      
     </footer>
   </body>
 </html>

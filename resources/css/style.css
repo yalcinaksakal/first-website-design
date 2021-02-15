@@ -3,16 +3,19 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   color: #555555;
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 20px;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /*
@@ -33,7 +36,7 @@ clearfix when u use floats at the end use cleafix
 /*reusable components*/
 
 .row {
-  max-width: 1140px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -89,14 +92,13 @@ h3 {
 .box p {
   font-size: 90%;
   line-height: 145%;
-  text-align: justify;
 }
 
 /*icons*/
 .big {
   font-size: 350%;
   display: block;
-  margin-left: 35%;
+  margin-left: auto;
   color: #e67e22;
   margin-bottom: 10px;
 }
@@ -119,6 +121,7 @@ a:visited {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding: 1px;
+  -webkit-transition: boder-bottom 0.2s, color 0.2s;
   transition: boder-bottom 0.2s, color 0.2s;
 }
 
@@ -140,6 +143,7 @@ input[type="submit"],
   font-weight: 300;
   text-decoration: none;
   border-radius: 200px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 input[type="submit"],
@@ -176,6 +180,8 @@ input[type="submit"]:hover,
 /*Header*/
 
 header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
+    url(img/hero.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(img/hero.jpg);
   background-size: cover;
@@ -186,10 +192,11 @@ header {
 
 .hero-text-box {
   position: absolute;
-  width: 100%;
+  width: 1140px;
   top: 50%;
   left: 50%;
-  transform: translate(-30%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -206,7 +213,7 @@ header {
 }
 */
 .main-nav {
-  margin-left: 45%;
+  float: right;
   list-style: none;
   margin-top: 50px;
 }
@@ -223,6 +230,7 @@ header {
   text-transform: uppercase;
   font-size: 90%;
   border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
 .main-nav li a:hover,
@@ -264,11 +272,16 @@ header {
   opacity: 0.6;
   width: 100%;
   height: auto;
+  -webkit-transform: scale(1.15);
   transform: scale(1.15);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
+  -webkit-transform: scale(1.03);
   transform: scale(1.03);
   opacity: 1;
 }
@@ -327,6 +340,7 @@ header {
 .nav-panel.stick {
   position: fixed;
   width: 168%;
+  -webkit-transform: scale(0.6) translate(-34%, -50%);
   transform: scale(0.6) translate(-34%, -50%);
 
   background-color: #5e5e5e92;
@@ -348,6 +362,8 @@ header {
 /*testimonials*/
 
 .testimonials {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))),
+    url(img/back-customers.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(img/back-customers.jpg);
   background-size: cover;
@@ -396,6 +412,7 @@ cite img {
   border-radius: 5px;
   width: 90%;
   margin-left: 5%;
+  -webkit-box-shadow: 0 2px 2px #e4e4e4;
   box-shadow: 0 2px 2px #e4e4e4;
 }
 
@@ -438,7 +455,7 @@ cite img {
 /*---------------------*/
 
 /*form*/
-.form {
+.contact-form {
   width: 60%;
   margin: 0 auto;
 }
@@ -502,6 +519,7 @@ footer {
   text-decoration: none;
   border: none;
   color: #888;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
@@ -515,6 +533,7 @@ footer {
   font-size: 160%;
 }
 .social-links i {
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
