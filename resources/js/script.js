@@ -22,11 +22,29 @@ $(".js--section-features").waypoint(
 );
 
 //mobile nav
+const nav = document.querySelector(".js--main-nav");
+const icon = document.querySelector(".js--nav-icon");
 
+icon.addEventListener("click", function (e) {
+  if (!nav.style.display) {
+    nav.style.display = "block";
+
+    icon.classList.toggle("ion-ios-menu");
+    icon.classList.toggle("ion-ios-close");
+  } else {
+    nav.style.display = "";
+    icon.classList.toggle("ion-ios-menu");
+    icon.classList.toggle("ion-ios-close");
+  }
+});
+
+/*
 $(".js--nav-icon").click(function () {
   const nav = $(".js--main-nav");
   const icon = $(".js--nav-icon");
+  console.log(nav);
   nav.slideToggle(200);
+
   if (icon.hasClass("icon ion-ios-menu")) {
     icon.addClass("icon ion-ios-close");
     icon.removeClass("icon ion-ios-menu");
@@ -34,7 +52,7 @@ $(".js--nav-icon").click(function () {
     icon.removeClass("icon ion-ios-close");
     icon.addClass("icon ion-ios-menu");
   }
-});
+});*/
 
 /*
 var waypoints = $("#handler-first").waypoint(
