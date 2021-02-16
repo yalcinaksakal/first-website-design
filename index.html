@@ -12,6 +12,9 @@
     <!-- include media queries css for responsive web pages -->
     <link rel="stylesheet" type="text/css" href="./resources/css/queries.css" />
 
+    <!-- animations 
+    <link rel="stylesheet" type="text/css" href="./vendors/css/animate.css" />
+-->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
       rel="stylesheet"
@@ -26,13 +29,19 @@
 
   <body>
     <header class="header">
-      <nav class="nav-panel">
+      <nav>
         <div class="row">
           <img
             src="resources/img/logo-white.png"
             alt="just food logo"
             class="logo"
           />
+          <a href="#" class="logo-black-link">
+            <img
+              src="resources/img/logo.png"
+              alt="just food logo"
+              class="black-logo"
+          /></a>
           <ul class="main-nav">
             <li><a href="#features">Food delivery</a></li>
             <li><a href="#how-it-works">How it works</a></li>
@@ -46,12 +55,14 @@
           goodbye junk food <br />
           hello super healthy meals
         </h1>
-        <a class="btn btn-full" href="#">I’m hungry</a>
-        <a class="btn btn-ghost" href="#">Show me more</a>
+        <a class="btn btn-full js--scroll-to-plan" href="#plans">I’m hungry</a>
+        <a class="btn btn-ghost js--scroll-to-start" href="#features"
+          >Show me more</a
+        >
       </div>
     </header>
 
-    <section class="section-features" id="features">
+    <section class="section-features js--section-features" id="features">
       <div class="row">
         <h2>Get food fast &mdash; not fast food.</h2>
         <p class="long-copy">
@@ -60,7 +71,7 @@
           we’re really good at it, we promise!
         </p>
       </div>
-      <div class="row">
+      <div class="row js--wp-1">
         <div class="col span-1-of-4 box">
           <i class="icon ion-ios-infinite big"></i>
           <h3>Up to 365 days/year</h3>
@@ -174,7 +185,7 @@
         <h2>How it works &mdash; Simple as 1, 2, 3</h2>
       </div>
       <div class="row">
-        <div class="col span-1-of-2 step-box">
+        <div class="col span-1-of-2 step-box js--wp-2">
           <img
             src="./resources/img/app-iPhone.png"
             alt="Justfood app on apple"
@@ -219,7 +230,7 @@
         <h2>We're currently in these cities</h2>
       </div>
 
-      <div class="row">
+      <div class="row js--wp-3">
         <div class="col span-1-of-4 box">
           <img src="./resources/img/lisbon-3.jpg" alt="lisbon" />
           <h3>Lisbon</h3>
@@ -332,13 +343,13 @@
       </div>
     </section>
 
-    <section class="plans" id="plans">
+    <section class="plans js--plans" id="plans">
       <div class="row">
         <h2>Sign up and pricing plans Title: Start eating healthy today</h2>
       </div>
       <div class="row">
         <div class="col span-1-of-3">
-          <div class="plan-box">
+          <div class="plan-box js--wp-4">
             <div>
               <h3>Premium</h3>
               <p class="plan-price">399$ <span>/month</span></p>
@@ -538,6 +549,17 @@
         <p>Copyright &copy; 2020 by JustFood. All rights reserved.</p>
       </div>
     </footer>
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--for old browsers-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <!--sticky waypoint-->
+    <script src="./vendors/js/jquery.waypoints.min.js"></script>
+
+    <script src="./resources/js/script.js"></script>
   </body>
 </html>
 

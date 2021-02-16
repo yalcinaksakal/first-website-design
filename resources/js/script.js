@@ -1,21 +1,78 @@
-const header = document.querySelector(".header");
+//
 
-const nav = document.querySelector(".nav-panel");
+//
 
-const navHeight = nav.getBoundingClientRect().height;
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  // console.log(entry);
-
-  if (!entry.isIntersecting) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
-};
-
-const elementObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight / 2}px`,
+//
+/*test jquery
+$(document).ready(function () {
+  $("h1").click(function () {
+    $(this).css("background-color", "red");
+  });
 });
+*/
+//sticky nav
+$(".js--section-features").waypoint(
+  function (direction) {
+    if (direction === "down") $("nav").addClass("sticky");
+    else $("nav").removeClass("sticky");
+  },
+  {
+    offset: "50px",
+  }
+);
 
-elementObserver.observe(header);
+/*
+var waypoints = $("#handler-first").waypoint(
+  function (direction) {
+    notify(this.element.id + " hit 25% from top of window");
+  },
+  {
+    offset: "25%",
+  }
+);
+*/
+
+//full button scroll behaviour
+/*
+$(".js--scroll-to-plan").click(function () {
+  $("html, body").animate({ scrollTop: $(".js--plans").offset().top }, 100);
+});
+*/
+/*
+//animations on scroll (to be able to animate, element should be invisible first, so check css)
+$(".js--wp-1").waypoint(
+  function (direction) {
+    $(".js--wp-1").addClass("animated fadeIn");
+  },
+  {
+    offset: "50%",
+  }
+);
+
+$(".js--wp-2").waypoint(
+  function (direction) {
+    $(".js--wp-2").addClass("animated fadeInUp");
+  },
+  {
+    offset: "50%",
+  }
+);
+
+$(".js--wp-3").waypoint(
+  function (direction) {
+    $(".js--wp-3").addClass("animated fadeIn");
+  },
+  {
+    offset: "50%",
+  }
+);
+
+$(".js--wp-4").waypoint(
+  function (direction) {
+    $(".js--wp-4").addClass("animated pulse");
+  },
+  {
+    offset: "50%",
+  }
+);
+*/
