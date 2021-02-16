@@ -21,6 +21,21 @@ $(".js--section-features").waypoint(
   }
 );
 
+//mobile nav
+
+$(".js--nav-icon").click(function () {
+  const nav = $(".js--main-nav");
+  const icon = $(".js--nav-icon");
+  nav.slideToggle(200);
+  if (icon.hasClass("icon ion-ios-menu")) {
+    icon.addClass("icon ion-ios-close");
+    icon.removeClass("icon ion-ios-menu");
+  } else {
+    icon.removeClass("icon ion-ios-close");
+    icon.addClass("icon ion-ios-menu");
+  }
+});
+
 /*
 var waypoints = $("#handler-first").waypoint(
   function (direction) {
