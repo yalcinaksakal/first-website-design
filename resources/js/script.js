@@ -24,8 +24,18 @@ $(".js--section-features").waypoint(
 //mobile nav
 const nav = document.querySelector(".js--main-nav");
 const icon = document.querySelector(".js--nav-icon");
+const row = document.querySelector(".nav--row");
 
-icon.addEventListener("click", function (e) {
+row.addEventListener("click", function (e) {
+  if (window.innerWidth > 7676) return;
+
+  if (e.target.closest(".js--nav-icon")) return;
+  icon.classList.add("ion-ios-menu");
+  icon.classList.remove("ion-ios-close");
+  nav.style.display = "";
+});
+
+icon.addEventListener("click", function () {
   if (!nav.style.display) {
     nav.style.display = "block";
 
